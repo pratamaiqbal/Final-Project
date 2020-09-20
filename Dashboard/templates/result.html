@@ -1,0 +1,32 @@
+{% extends 'index.html' %} {% block content %}
+<center>
+    <div class="p1">
+        <b>Tip Prediction</b>
+    </div>
+    <br>
+    <div class="container">
+        <b>Suhu: </b> {{suhu}}C<br>
+        <b>Persentase Kelembapan: </b> {{hum}}%<br>
+        <b>Kecepatan Angin: </b> {{wind}}km/jam<br>
+        <b>Hari Libur: </b> {{holiday}}<br>
+        <b>Akhir Pekan: </b> {{weekend}}<br>
+        <b>Cuaca: </b> {{cuaca}}<br>
+        <b>Bulan: </b> {{bulan}}<br>
+        <b>Tanggal: </b> {{tanggal}}<br>
+        <b>Jam: </b> {{jam}}<br>
+        <b>Prediksi: </b> {{prediksi}} pelanggan<br>
+    </div>
+    <hr>
+    <a href="/pred_lr" target="_self">
+        <button style="background-color: rgb(255, 90, 95); color: whitesmoke" class="btn btn-light">
+            Predict Again
+        </button>
+    </a>
+    <a href="/" target="_self">
+        <button style="background-color: rgb(255, 90, 95); color: whitesmoke" class="btn btn-light">
+            Back to Home
+        </button>
+    </a>
+</center>
+
+{% endblock %}

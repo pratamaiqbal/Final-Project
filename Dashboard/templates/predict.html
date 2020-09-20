@@ -1,0 +1,178 @@
+{% extends 'index.html' %} {% block content %}
+<center>
+    <p><b>Table</b></p>
+
+    <div class='table-bordered' style='overflow: auto; height: 200px; width: 35%; margin:0 auto'>
+        <table>
+            <th>
+                <td>timestamp</td>
+                <td>t1</td>
+                <td>t2</td>
+                <td>hum</td>
+                <td>wind_speed</td>
+                <td>weather_code</td>
+                <td>is_holiday</td>
+                <td>is_weekend</td>
+                <td>season</td>
+            </th>
+            {% for item in data %}
+            <tr>
+                <td>*</td>
+                <td>{{item[0]}}</td>
+                <td>{{item[1]}}</td>
+                <td>{{item[2]}}</td>
+                <td>{{item[3]}}</td>
+                <td>{{item[4]}}</td>
+                <td>{{item[5]}}</td>
+                <td>{{item[6]}}</td>
+                <td>{{item[7]}}</td>
+                <td>{{item[8]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <form method="POST" action="http://localhost:5000/pred_result">
+        <br>
+        <p><b>Prediction</b></p>
+        <div class="row" style="width: 500px">
+            <div class="col-md-6" style="width: 250px">
+                <label for="t1">Suhu (C):</label>
+                <input type="number" name="t1" step="0.01" max="100" style="width: 250px" id="t1" class="form-control" required=True/>
+            </div>
+        </div>
+        <div class="row" style="width: 500px">
+            <div class="col-md-6" style="width: 250px">
+                <label for="hum">Persentase Kelembapan:</label>
+                <input type="number" name="hum" step="0.01" max="100" style="width: 250px" id="hum" class="form-control" required=True/>
+            </div>
+        </div>
+        <div class="row" style="width: 500px">
+            <div class="col-md-6" style="width: 250px">
+                <label for="wind">Kecepatan angin (km/jam):</label>
+                <input type="number" name="wind" step="0.01" max="100" style="width: 250px" id="wind" class="form-control" required=True/>
+            </div>
+        </div>
+        <div class="input-group mb-3" style="width: 500px">
+            <span class="input-group-text" style="width: 125px">Hari Libur:</span>
+            <select name="holiday" style="width: 250px" class="form-control" required="required">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option disabled selected hidden>Hari Libur?</option>
+        </select>
+        </div>
+        <div class="input-group mb-3" style="width: 500px">
+            <span class="input-group-text" style="width: 125px">Akhir Pekan:</span>
+            <select name="weekend" style="width: 250px" class="form-control" required="required">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option disabled selected hidden>Akhir Pekan?</option>
+        </select>
+        </div>
+        <div class="input-group mb-3" style="width: 500px">
+            <span class="input-group-text" style="width: 125px">Cuaca:</span>
+            <select name="cuaca" style="width: 250px" class="form-control" required="required">
+            <option value="Cerah">Cerah</option>
+            <option value="Sedikit Berawan">Sedikit Berawan</option>
+            <option value="Berawan Pecah-Pecah">Berawan Pecah-Pecah</option>
+            <option value="Berawan">Berawan</option>
+            <option value="Hujan Ringan">Hujan Ringan</option>
+            <option value="Hujan Disertai Badai Petir">Hujan Disertai Badai Petir</option>
+            <option value="Hujan Salju">Hujan Salju</option>
+            <option disabled selected hidden>Cuaca</option>
+        </select>
+        </div>
+        <div class="input-group mb-3" style="width: 500px">
+            <span class="input-group-text" style="width: 125px">Bulan:</span>
+            <select name="bulan" style="width: 250px" class="form-control" required="required">
+            <option value="januari">Januari</option>
+            <option value="februari">Februari</option>
+            <option value="maret">Maret</option>
+            <option value="april">April</option>
+            <option value="mei">Mei</option>
+            <option value="juni">Juni</option>
+            <option value="juli">Juli</option>
+            <option value="agustus">Agustus</option>
+            <option value="september">September</option>
+            <option value="oktober">Oktober</option>
+            <option value="november">November</option>
+            <option value="desember">Desember</option>
+            <option disabled selected hidden>Bulan</option>
+        </select>
+        </div>
+        <div class="input-group mb-3" style="width: 500px">
+            <span class="input-group-text" style="width: 125px">Tanggal:</span>
+            <select name="tanggal" style="width: 250px" class="form-control" required="required">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+            <option disabled selected hidden>Tanggal?</option>
+        </select>
+        </div>
+        <div class="input-group mb-3" style="width: 500px">
+            <span class="input-group-text" style="width: 125px">Jam:</span>
+            <select name="jam" style="width: 250px" class="form-control" required="required">
+            <option value="0">00:00</option>
+            <option value="1">01:00</option>
+            <option value="2">02:00</option>
+            <option value="3">03:00</option>
+            <option value="4">04:00</option>
+            <option value="5">05:00</option>
+            <option value="6">06:00</option>
+            <option value="7">07:00</option>
+            <option value="8">08:00</option>
+            <option value="9">09:00</option>
+            <option value="10">10:00</option>
+            <option value="11">11:00</option>
+            <option value="12">12:00</option>
+            <option value="13">13:00</option>
+            <option value="14">14:00</option>
+            <option value="15">15:00</option>
+            <option value="16">16:00</option>
+            <option value="17">17:00</option>
+            <option value="18">18:00</option>
+            <option value="19">19:00</option>
+            <option value="20">20:00</option>
+            <option value="21">21:00</option>
+            <option value="22">22:00</option>
+            <option value="23">23:00</option>
+
+            <option disabled selected hidden>Jam?</option>
+        </select>
+        </div>
+
+        <br>
+        <button type="submit" style="background-color: rgb(4,122,133); color: whitesmoke" class="btn btn-info">Predict</button>
+    </form>
+    <br>
+</center>
+
+{% endblock %}
