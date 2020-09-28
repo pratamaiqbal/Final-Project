@@ -1,23 +1,8 @@
 # Prediksi Jumlah Pelanggan Rental Sepeda
 
-## Latar Belakang
-### Tren Bersepeda
-Sepeda memang beberapa tahun terakhir sudah menjadi tren di Indonesia sejak program Bike To Work. Tetapi belakangan ini saat era New Normal diberlakukan bersepeda menjadi salah satu olahraga yang digemari oleh semua kalangan. Sebelum era New Normal sepeda hanya digandrungi oleh komunitas atau kelompok sepeda, tetapi sekarang hampir semua kalangan melakukan olahraga bersepeda. Bahkan di era New Normal jumlah pesepeda mengalami peningkatan yang cukup signifikan dibandingkan saat New Normal belum diterapkan.
-### Faktor Meningkatnya Jumlah Pesepeda Saat New Normal
-- Khawatir jika menggunakan transportasi umum.
-- Pembatasan kendaraan baik umum atau pribadi.
-- Mulai sadar akan pentingnya olahraga untuk menginkatkan imunitas tubuh.
-- Olahraga yang tidak kontak langsung dengan orang lain.
-- Bertepatan dengan musim kemarau.
-- Semakin banyaknya ruas jalur khusus pesepeda. 
-- Ingin mengikuti tren saat ini.
-### Akibat Meningkatnya Jumlah Pesepeda Saat New Normal
-Akibat dari  meningkatknya jumlah orang yang bersepeda harga sepeda naik hampir 2x dari harga biasanya bahkan harga sepeda bekas pun harga jualnya lebih mahal dari pada saat sepeda tersebut pertama dibeli. Selain itu stok sepeda di toko-toko pun mulai kehabisan hingga kita harus memesan terlebih dahulu jika ingin membeli sepeda. Karena hal-hal tersebut tentunya tidak semua orang bisa membeli sepeda, namun karena ingin mengikuti tren banyak yang ingin tetap bersepeda, tetapi bagaimana caranya? Tentunya dengan cara rental sepeda.
-### Bisnis Rental Sepeda
-Bisnis rental sepeda merupakan jasa untuk peminjaman sepeda kepada perorangan atau kelompok, dan biasanya disewakan dalam hitungan per jam atau bahkan per hari. Makin maraknya pesepeda pada era New Normal seperti saat ini, bisnis rental sepeda menjadi salah satu bisnis yang mulai dilirik. Bahkan penyedia jasa wisata, tempat wisata dan Event Organizer mulai melirik bisnis rental sepeda karena potensi bisnis dikala tren sepeda saat ini. Pelaku bisnis yang sudah menjalankan bisnis rental sepeda bahkan mengaku slot penyewaan sepeda selalu penuh bahkan harus booking terlebih dahulu agar mendapat antrian. Tentunya hal tersebut cukup disayangkan karena bisa jadi orang pindah tempat penyewaan dan kita tidak dapat memperoleh keuntungan yang maksimal. Selain itu para pelaku bisnis rental sepeda pun ingin armada yang tersedia dapat dimanfaatkan secara maksimal atau terpakai seluruhnya.
-### Problem
+## Problem
 Bagaimana cara menentukkan atau memprediksi berapa jumlah pelanggan yang akan melakukan penyewaan sepeda agar dapat menentukkan jumlah sepeda yang akan dikerahkan atau dapat memaksimalkan jumlah sepeda yang dikerahkan agar memperoleh keuntungan yang maksimal?
-### Goals
+## Goals
 Dapat memprediksi atau menentukkan jumlah pelanggan yang akan menggunakan jasa rental sepeda untuk dapat menentukkan jumlah sepeda yang dikerahkan agar jumlah sepeda yang dikerahkan tidak kekurangan dan dapat memaksimalkan jumlah sepeda yang ada agar memperoleh keuntungan yang maksimal.
 
 Data yang digunakan didapatkan atau diperoleh dari Kaggle bisa klik [di sini](https://www.kaggle.com/hmavrodiev/london-bike-sharing-dataset).
